@@ -40623,7 +40623,7 @@ a000.h8R = (function (N8R) {
         this.log = C.wi(this)
         this.k5 = Ya(this)
         this.ttb = wa(this)
-        this.Og = O.createElement('DIV', q.ffa, void 0, {id: this.K})
+        this.Og = O.createElement('DIV', q.ffa, 0, {id: this.K})
         this.RKb()
         bg = Ea(F.Ch(1))
         this.dd = this.log.dla('Playback')
@@ -41999,7 +41999,7 @@ a000.h8R = (function (N8R) {
       c.prototype.nga = function (n) {
         var p = l.createElement('DIV', 'display:inline-block'),
             n = l.createElement('DIV', 0, n),
-            q = l.createElement('select', 0, 0, {disabled: 'disabled', multiple: 1})
+            q = l.createElement('select', 0, 0, {disabled: 1, multiple: 1})
         p.appendChild(n)
         p.appendChild(q)
         this.wga.appendChild(p)
@@ -42024,8 +42024,8 @@ a000.h8R = (function (N8R) {
 
       function c (h, m) {
         this.kna = h
-        this.TG = {position: 'absolute', inset: '0', display: 'block'}
-        this.element = g.createElement('DIV', void 0, void 0, {'class': 'player-timedtext'})
+        this.TG = {position: 'absolute', inset: 0, display: 'block'}
+        this.element = g.createElement('DIV', 0, 0, {'class': 'player-timedtext'})
         this.element.onselectstart = function () {return !1}
         this.W9a(m)
         this.EXa = this.AGb(this.kna)
@@ -42089,7 +42089,7 @@ a000.h8R = (function (N8R) {
           }
           v = k.Obb(v, y)
           if (z = u && u[0] && u[0].textNodes && u[0].textNodes[0] && u[0].textNodes[0].style) {
-            (y = z.windowColor, z = z.windowOpacity, y && 0 < z && (A = Math.round(n / 50), r = l.KWa(u, v, A, y, r), r = g.createElement('div', 'position:absolute;left:0;top:0;right:0;bottom:0;opacity:' + z, r, c.Jca), m.insertBefore(r, m.firstChild)))
+            (y = z.windowColor, z = z.windowOpacity, y && 0 < z && (A = Math.round(n / 50), r = l.KWa(u, v, A, y, r), r = g.createElement('div', 'position:absolute;inset:0;opacity:' + z, r, c.Jca), m.insertBefore(r, m.firstChild)))
           }
           m.style.display = 'none'
           for (r = v.length - 1; 0 <= r; r--) {

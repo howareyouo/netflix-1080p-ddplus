@@ -98,10 +98,13 @@ button, input, textarea {
   height: 15em;
   width: 11em;
 }
-.player-streams button { 
+.player-streams button {
   background: #444;
   border-radius: .3em;
   border: 1px solid #555;
   padding: .25em .5em;
   margin: 0 1em;
+}
+.player-timedtext span {
+  font-weight: 400 !important
 }

@@ -32532,8 +32532,7 @@ a000.h8R = (function (N8R) {
           switch (D00) {
             case 2:
               g.prototype.Olb = function (k, l) {
-                var F00, d
-                F00 = 2
+                var d, F00 = 2
                 for (; F00 !== 14;) {
                   switch (F00) {
                     case 5:
@@ -32591,8 +32590,7 @@ a000.h8R = (function (N8R) {
                 }
               }
               g.prototype.kPa = function (k, l) {
-                var H00, d, f, h
-                H00 = 2
+                var d, f, h, H00 = 2
                 for (; H00 !== 4;) {
                   switch (H00) {
                     case 2:
@@ -32623,7 +32621,6 @@ a000.h8R = (function (N8R) {
                 break
               case 3:
                 this.I = k
-                ''
                 E00 = 6
                 break
             }
@@ -92084,7 +92081,7 @@ a000.h8R = (function (N8R) {
       a.prototype.eD = function (c, g) {return '<font color="' + ((void 0 === g ? 0 : g) ? this.lLb : this.IMb) + '">' + c + ': </font>'}
       a.prototype.bYa = function (c, g) {
         g = g || ''
-        c = '<li><a href="#">' + this.eD(c) + 'Array[' + g.length + ']</a><ul>'
+        c = '<li><a>' + this.eD(c) + 'Array[' + g.length + ']</a><ul>'
         for (var k = 0; k < g.length; ++k) {c += this.ea(k.toString(), g[k])}
         c += this.ea('length', g.length, !0)
         return c + '</ul></li>'
@@ -92095,7 +92092,7 @@ a000.h8R = (function (N8R) {
         if (g instanceof CryptoKey) {
           return this.YFb(c, g)
         }
-        l = '<li><a href="#">' + ('~~NONAME~~' !== c ? this.eD(c) : '') + 'Object</a><ul>'
+        l = '<li><a>' + ('~~NONAME~~' !== c ? this.eD(c) : '') + 'Object</a><ul>'
         Object.entries(g).forEach(function (d) {
           var f = aa(d)
           d = f.next().value
@@ -92106,24 +92103,24 @@ a000.h8R = (function (N8R) {
         return l += '</li>'
       }
       a.prototype.YFb = function (c, g) {
-        c = '<li><a href="#">' + this.eD(c) + 'CryptoKey</a>'
+        c = '<li><a>' + this.eD(c) + 'CryptoKey</a>'
         c = c + '<ul>' + this.AZa('algorithm', g.algorithm)
         c += this.hYa('extractable', g.extractable)
         c += this.e_a('type', g.type)
         c += this.bYa('usages', g.usages)
         return c + '</ul></li>'
       }
-      a.prototype.CHb = function (c, g, k) {return '<li><a href="#">' + this.eD(c, void 0 === k ? !1 : k) + ('<font color="' + this.lRb + '">' + g.toString() + '</font></a></li>')}
-      a.prototype.hYa = function (c, g, k) {return '<li><a href="#">' + this.eD(c, void 0 === k ? !1 : k) + ('<font color="' + this.Mtb + '">' + g.toString() + '</font></a></li>')}
+      a.prototype.CHb = function (c, g, k) {return '<li><a>' + this.eD(c, void 0 === k ? !1 : k) + ('<font color="' + this.lRb + '">' + g.toString() + '</font></a></li>')}
+      a.prototype.hYa = function (c, g, k) {return '<li><a>' + this.eD(c, void 0 === k ? !1 : k) + ('<font color="' + this.Mtb + '">' + g.toString() + '</font></a></li>')}
       a.prototype.e_a = function (c, g, k) {
         128 < g.length && (g = g.substr(0, 128) + '...')
-        return '<li><a href="#">' + this.eD(c, void 0 === k ? !1 : k) + ('<font color="' + this.L_b + '">"' + g + '"</font></a></li>')
+        return '<li><a>' + this.eD(c, void 0 === k ? !1 : k) + ('<font color="' + this.L_b + '">"' + g + '"</font></a></li>')
       }
-      a.prototype.BHb = function (c) {return '<li><a href="#">' + this.eD(c) + ('<font color="' + this.hRb + '">null</font></a></li>')}
+      a.prototype.BHb = function (c) {return '<li><a>' + this.eD(c) + ('<font color="' + this.hRb + '">null</font></a></li>')}
       a.prototype.MIb = function (c, g) {
         g = 'undefined' === typeof g ? '' : g.toString()
         255 < g.length && (g = g.substr(0, 255) + '...')
-        return '<li><a href="#">' + this.eD(c) + ('<font color="' + this.W1b + '">' + g + '</font></a></li>')
+        return '<li><a>' + this.eD(c) + ('<font color="' + this.W1b + '">' + g + '</font></a></li>')
       }
       a.prototype.ea = function (c, g, k) {
         k = void 0 === k ? !1 : k
@@ -95737,9 +95734,7 @@ a000.h8R = (function (N8R) {
         this.fTa(u, g.Ub.xl.Pb)
       }
       c.prototype.fTa = function (u, w) {
-        var x, y, z, A, B, E, C, F, G
-        x = this
-        y = u
+        var z, A, B, E, C, F, G, x = this, y = u
         this.bSa && (y -= k.config.MY)
         z = this.AJ[w]
         A = z.yw

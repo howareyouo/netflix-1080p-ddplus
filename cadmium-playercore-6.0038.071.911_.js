@@ -1608,9 +1608,7 @@ a000.Z9M = (function (j9M) {
     Rc = Bb.Class.create({
       init: function () {
         Object.defineProperties(this, {
-          _queue: {
-            value: []
-          },
+          _queue: {value: []},
           _waiters: {value: {}},
           _nextWaiter: {value: 0, writable: !0},
           _lastWaiter: {value: 0, writable: !0}
@@ -1721,9 +1719,7 @@ a000.Z9M = (function (j9M) {
     yd = Bb.Class.create({
       init: function () {
         Object.defineProperties(this, {
-          _readers: {
-            value: {}
-          },
+          _readers: {value: {}},
           _waitingReaders: {value: {}},
           _writer: {value: null, writable: !0},
           _waitingWriters: {value: {}},
@@ -2526,11 +2522,7 @@ a000.Z9M = (function (j9M) {
         function ua (fa) {
           Ka(Ia, function () {
             Object.defineProperties(na, {
-              rawKey: {
-                value: Ba,
-                writable: !1,
-                configurable: !1
-              }, encoded: {value: fa}
+              rawKey: {value: Ba}, encoded: {value: fa}
             })
             return this
           }, na)
@@ -2561,11 +2553,7 @@ a000.Z9M = (function (j9M) {
         function ua (fa) {
           Ka(Ia, function () {
             Object.defineProperties(na, {
-              rawKey: {
-                value: Ba,
-                writable: !1,
-                configurable: !1
-              }, encoded: {value: fa}
+              rawKey: {value: Ba}, encoded: {value: fa}
             })
             return this
           }, na)
@@ -2872,12 +2860,8 @@ a000.Z9M = (function (j9M) {
           id: {value: ua},
           privateKey: {value: na},
           publicKey: {value: fa},
-          transform: {
-            value: ca == Ba.ENCRYPT_DECRYPT_PKCS1 ? zd : ca == Ba.ENCRYPT_DECRYPT_OAEP ? gd : 'nullOp'
-          },
-          wrapTransform: {
-            value: ca == Ba.WRAP_UNWRAP_PKCS1 ? zd : ca == Ba.WRAP_UNWRAP_OAEP ? gd : 'nullOp'
-          },
+          transform: {value: ca == Ba.ENCRYPT_DECRYPT_PKCS1 ? zd : ca == Ba.ENCRYPT_DECRYPT_OAEP ? gd : 'nullOp'},
+          wrapTransform: {value: ca == Ba.WRAP_UNWRAP_PKCS1 ? zd : ca == Ba.WRAP_UNWRAP_OAEP ? gd : 'nullOp'},
           algo: {value: ca == Ba.SIGN_VERIFY ? je : 'nullOp'}
         })
       }, encrypt: function (La, ua) {
@@ -3192,9 +3176,7 @@ a000.Z9M = (function (j9M) {
     Ec = Bb.Class.create({
       init: function (Ia) {
         Object.defineProperties(this, {
-          scheme: {
-            value: Ia
-          }
+          scheme: {value: Ia}
         })
       },
       getIdentity: function () {},
@@ -3225,11 +3207,7 @@ a000.Z9M = (function (j9M) {
   ld = Bb.Class.create({
     init: function (Ia) {
       Object.defineProperties(this, {
-        scheme: {
-          value: Ia,
-          writable: !1,
-          configurable: !1
-        }
+        scheme: {value: Ia}
       })
     }, createData: function (Ia, La) {}, getCryptoContext: function (Ia, La) {}
   });
@@ -3388,11 +3366,7 @@ a000.Z9M = (function (j9M) {
   of = Bb.Class.create({
     init: function () {
       Object.defineProperties(this, {
-        rsaKeys: {
-          value: {},
-          writable: !1,
-          configurable: !1
-        }
+        rsaKeys: {value: {}}
       })
     },
     addPublicKey: function (fa, ca) {
@@ -3422,12 +3396,7 @@ a000.Z9M = (function (j9M) {
   pf = Bb.Class.create({
     init: function (fa) {
       Object.defineProperties(this, {
-        _data: {
-          value: fa,
-          writable: !1,
-         
-          configurable: !1
-        },
+        _data: {value: fa},
         _closed: {value: !1, writable: !0},
         _currentPosition: {value: 0, writable: !0},
         _mark: {value: -1, writable: !0}
@@ -3593,9 +3562,7 @@ a000.Z9M = (function (j9M) {
     ca = Jd.extend({
       init: function (Z) {
         Object.defineProperties(this, {
-          _out: {
-            value: Z
-          },
+          _out: {value: Z},
           _buffer: {value: zb, writable: !0},
           _exception: {value: zb, writable: !0},
           _timedout: {value: !1, writable: !0},
@@ -3667,9 +3634,7 @@ a000.Z9M = (function (j9M) {
     ae = Bb.Class.create({
       init: function (Z, aa) {
         Object.defineProperties(this, {
-          _httpLocation: {
-            value: Z
-          }, _timeout: {value: aa, writable: !0}
+          _httpLocation: {value: Z}, _timeout: {value: aa, writable: !0}
         })
       }, setTimeout: function (Z) {this._timeout = Z}, openConnection: function () {
         var Z = new fa(this._httpLocation, this._timeout)
@@ -3774,9 +3739,7 @@ a000.Z9M = (function (j9M) {
     Vc = Bb.Class.create({
       init: function (fa) {
         Object.defineProperties(this, {
-          keyExchangeScheme: {
-            value: fa
-          }
+          keyExchangeScheme: {value: fa}
         })
       },
       getKeydata: function () {},
@@ -3810,9 +3773,7 @@ a000.Z9M = (function (j9M) {
     Wc = Bb.Class.create({
       init: function (fa, ca) {
         Object.defineProperties(this, {
-          masterToken: {
-            value: fa
-          }, keyExchangeScheme: {value: ca, wrtiable: !1}
+          masterToken: {value: fa}, keyExchangeScheme: {value: ca, wrtiable: !1}
         })
       },
       getKeydata: function () {},
@@ -3853,18 +3814,14 @@ a000.Z9M = (function (j9M) {
     var fa = Bb.Class.create({
       init: function (ca, Z) {
         Object.defineProperties(this, {
-          keyResponseData: {
-            value: ca
-          }, cryptoContext: {value: Z}
+          keyResponseData: {value: ca}, cryptoContext: {value: Z}
         })
       }
     })
     gc = Bb.Class.create({
       init: function (ca) {
         Object.defineProperties(this, {
-          scheme: {
-            value: ca
-          }
+          scheme: {value: ca}
         })
       },
       createRequestData: function (ca, Z, aa) {},
@@ -4987,11 +4944,7 @@ a000.Z9M = (function (j9M) {
           }
           if (la) {
             return (Object.defineProperties(this, {
-              entityAuthenticationData: {
-                value: Z,
-                writable: !1,
-                configurable: !1
-              },
+              entityAuthenticationData: {value: Z},
               recipient: {value: aa},
               messageId: {value: ea},
               errorCode: {value: ba},
@@ -5018,11 +4971,7 @@ a000.Z9M = (function (j9M) {
                   result: function (ja) {
                     Ka(pa, function () {
                       Object.defineProperties(this, {
-                        entityAuthenticationData: {
-                          value: Z,
-                          writable: !1,
-                          configurable: !1
-                        },
+                        entityAuthenticationData: {value: Z},
                         recipient: {value: aa},
                         messageId: {value: ea},
                         errorCode: {value: ba},
@@ -5447,9 +5396,7 @@ a000.Z9M = (function (j9M) {
     pa = He = Bb.Class.create({
       init: function (ma, da, ha, ja, wa, Pa, Ja, Ma, Ra) {
         Object.defineProperties(this, {
-          messageId: {
-            value: ma
-          },
+          messageId: {value: ma},
           nonReplayableId: {value: da},
           renewable: {value: ha},
           capabilities: {value: ja},
@@ -5464,9 +5411,7 @@ a000.Z9M = (function (j9M) {
     ya = Ie = Bb.Class.create({
       init: function (ma, da, ha) {
         Object.defineProperties(this, {
-          peerMasterToken: {
-            value: ma
-          },
+          peerMasterToken: {value: ma},
           peerUserIdToken: {value: da},
           peerServiceTokens: {value: ha}
         })
@@ -5795,11 +5740,7 @@ a000.Z9M = (function (j9M) {
                   result: function (da) {
                     Ka(ra, function () {
                       Object.defineProperties(this, {
-                        sequenceNumber: {
-                          value: ca,
-                          writable: !1,
-                          configurable: !1
-                        },
+                        sequenceNumber: {value: ca},
                         messageId: {value: Z},
                         compressionAlgo: {value: ea},
                         data: {value: ba},
@@ -7401,11 +7342,7 @@ a000.Z9M = (function (j9M) {
 
     function aa (Ma, Ra, oa) {
       Object.defineProperties(this, {
-        requestHeader: {
-          value: Ma,
-          writable: !1,
-          configurable: !1
-        },
+        requestHeader: {value: Ma},
         payloads: {value: Ra},
         handshake: {value: oa}
       })
@@ -7413,11 +7350,7 @@ a000.Z9M = (function (j9M) {
 
     function ea (Ma, Ra) {
       Object.defineProperties(this, {
-        requestHeader: {
-          value: Ra.requestHeader,
-          writable: !1,
-          configurable: !1
-        },
+        requestHeader: {value: Ra.requestHeader},
         payloads: {value: Ra.payloads},
         handshake: {value: Ra.handshake},
         response: {value: Ma}
@@ -7466,9 +7399,7 @@ a000.Z9M = (function (j9M) {
     la = Se.extend({
       init: function (Ma) {
         Object.defineProperties(this, {
-          _appCtx: {
-            value: Ma
-          }
+          _appCtx: {value: Ma}
         })
       },
       getCryptoContexts: function () {return this._appCtx.getCryptoContexts()},
@@ -8245,9 +8176,7 @@ a000.Z9M = (function (j9M) {
     ha = Bb.Class.create({
       init: function (oa, xa, Ca, Fa, Aa, Sa) {
         Object.defineProperties(this, {
-          _ctrl: {
-            value: oa
-          },
+          _ctrl: {value: oa},
           _ctx: {value: xa},
           _msgCtx: {value: Ca},
           _input: {value: Fa},
@@ -8453,9 +8382,7 @@ a000.Z9M = (function (j9M) {
     ja = Bb.Class.create({
       init: function (oa, xa, Ca, Fa, Aa, Sa, Ea) {
         Object.defineProperties(this, {
-          _ctrl: {
-            value: oa
-          },
+          _ctrl: {value: oa},
           _ctx: {value: xa},
           _msgCtx: {value: Ca},
           _input: {value: Fa},
@@ -8762,9 +8689,7 @@ a000.Z9M = (function (j9M) {
     wa = Bb.Class.create({
       init: function (oa, xa, Ca, Fa, Aa, Sa, Ea) {
         Object.defineProperties(this, {
-          _ctrl: {
-            value: oa
-          },
+          _ctrl: {value: oa},
           _ctx: {value: xa},
           _msgCtx: {value: Ca},
           _appError: {value: Fa},
@@ -9140,9 +9065,7 @@ a000.Z9M = (function (j9M) {
     Qd = Bb.Class.create({
       init: function (fa) {
         Object.defineProperties(this, {
-          id: {
-            value: fa
-          }
+          id: {value: fa}
         })
       },
       toJSON: function () {
@@ -9208,12 +9131,7 @@ a000.Z9M = (function (j9M) {
           }
           if (pa) {
             return (Object.defineProperties(this, {
-              ctx: {
-                value: ca,
-                writable: !1,
-               
-                configurable: !1
-              },
+              ctx: {value: ca},
               renewalWindowSeconds: {value: da},
               expirationSeconds: {value: ha},
               sequenceNumber: {value: ea},
@@ -9243,12 +9161,7 @@ a000.Z9M = (function (j9M) {
                   result: function (oa) {
                     Ka(ya, function () {
                       Object.defineProperties(this, {
-                        ctx: {
-                          value: ca,
-                          writable: !1,
-                         
-                          configurable: !1
-                        },
+                        ctx: {value: ca},
                         renewalWindowSeconds: {value: da},
                         expirationSeconds: {value: ha},
                         sequenceNumber: {value: ea},
@@ -9447,12 +9360,7 @@ a000.Z9M = (function (j9M) {
                   result: function (oa) {
                     Ka(la, function () {
                       Object.defineProperties(this, {
-                        ctx: {
-                          value: ca,
-                          writable: !1,
-                         
-                          configurable: !1
-                        },
+                        ctx: {value: ca},
                         renewalWindowSeconds: {value: ya},
                         expirationSeconds: {value: ma},
                         mtSerialNumber: {value: ea.serialNumber},
@@ -9626,12 +9534,7 @@ a000.Z9M = (function (j9M) {
           ha = ka ? ka.serialNumber : -1
           if (pa) {
             return (Pa = pa.tokendata, Object.defineProperties(this, {
-              ctx: {
-                value: Z,
-                writable: !1,
-               
-                configurable: !1
-              },
+              ctx: {value: Z},
               name: {value: aa},
               mtSerialNumber: {value: da},
               uitSerialNumber: {value: ha},
@@ -9666,12 +9569,7 @@ a000.Z9M = (function (j9M) {
                     result: function (Ra) {
                       Ka(ya, function () {
                         Object.defineProperties(this, {
-                          ctx: {
-                            value: Z,
-                            writable: !1,
-                           
-                            configurable: !1
-                          },
+                          ctx: {value: Z},
                           name: {value: aa},
                           mtSerialNumber: {value: da},
                           uitSerialNumber: {value: ha},
@@ -9706,12 +9604,7 @@ a000.Z9M = (function (j9M) {
               result: function (Ja) {
                 Ka(ya, function () {
                   Object.defineProperties(this, {
-                    ctx: {
-                      value: Z,
-                      writable: !1,
-                     
-                      configurable: !1
-                    },
+                    ctx: {value: Z},
                     name: {value: aa},
                     mtSerialNumber: {value: da},
                     uitSerialNumber: {value: ha},
@@ -9859,9 +9752,7 @@ a000.Z9M = (function (j9M) {
     Sc = Bb.Class.create({
       init: function (fa) {
         Object.defineProperties(this, {
-          scheme: {
-            value: fa
-          }
+          scheme: {value: fa}
         })
       },
       getAuthData: function () {},
@@ -9893,11 +9784,7 @@ a000.Z9M = (function (j9M) {
   Ve = Bb.Class.create({
     init: function (fa) {
       Object.defineProperties(this, {
-        scheme: {
-          value: fa,
-          writable: !1,
-          configurable: !1
-        }
+        scheme: {value: fa}
       })
     }, createData: function (fa, ca, Z, aa) {}, authenticate: function (fa, ca, Z, aa) {}
   });
@@ -37672,9 +37559,7 @@ a000.Z9M = (function (j9M) {
 
       function c (f) {
         return (a(f) ? f : Object.defineProperties(f, {
-          oUa: {
-            value: {}
-          }
+          oUa: {value: {}}
         })).oUa
       }
 
@@ -85041,9 +84926,7 @@ a000.Z9M = (function (j9M) {
 
       function c (f) {
         return (a(f) ? f : Object.defineProperties(f, {
-          pUa: {
-            value: {}
-          }
+          pUa: {value: {}}
         })).pUa
       }
 
@@ -93308,8 +93191,7 @@ a000.Z9M = (function (j9M) {
                 }
                 N.on(S, V)
               },
-              enumerable: !0,
-              configurable: !1
+              enumerable: !0
             })
           })
         }
@@ -104847,7 +104729,7 @@ a000.Z9M = (function (j9M) {
               'playready-h264hpl40-dash'
             )
             if (window.useHEVC) {
-              M = M.filter(e => !/main10-L5/.test(e))
+              M = M.filter(e => !/main10-L/.test(e))
             }
           } else {
             M = M.filter(e => !/^playready-h264/.test(e))

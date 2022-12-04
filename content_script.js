@@ -6,8 +6,8 @@ function insertScript(scriptText) {
 
 let conf = {
   useDDplus: 1,
-  useAVCH: 0,
   useDV: 1,
+  useAVCH: 0,
   useHEVC: 0,
   useHEACC: 1,
   useAV1: 1,

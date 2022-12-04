@@ -104847,7 +104847,7 @@ a000.Z9M = (function (j9M) {
               'playready-h264hpl40-dash'
             )
             if (window.useHEVC) {
-              M = M.filter(e => !/main10-L5/.test(e))
+              M = M.filter(e => !/main10-L/.test(e))
             }
           } else {
             M = M.filter(e => !/^playready-h264/.test(e))

@@ -16117,8 +16117,7 @@ a000.Z9M = (function (j9M) {
         return function (h, g, n) {
           var p = n.value
           n.value = function () {
-            var q, t, v, w, u, x
-            t = b.yua(this)
+            var q, v, w, u, x, t = b.yua(this)
             if (t) {
               (v = c(d, this, arguments), w = null !== (q = null === d || void 0 === d ? void 0 : d.methodName) && void 0 !== q ? q : String(g), u = t.ZV(w, v, null === d || void 0 === d ? void 0 : d.Dl, null === d || void 0 === d ? void 0 : d.Upc))
             }
@@ -16212,7 +16211,6 @@ a000.Z9M = (function (j9M) {
         d.prototype.tb = function () {
           Object.defineProperties(this.K.Mn, {
             bla: {
-             
               value: null,
               configurable: !0
             }
@@ -16344,11 +16342,8 @@ a000.Z9M = (function (j9M) {
       }
       c.prototype.tcc = function (f, d) {return (f[k.D4 + this.ema] || 0) - (d[k.D4 + this.ema] || 0)}
       Ua.Object.defineProperties(c.prototype, {
-        value: {
-          configurable: !0,
-          enumerable: !0,
-          get() {return this.Sa}
-        }, Vk: {configurable: !0, enumerable: !0, get() {return this.Fxb}}
+        value: {configurable: !0, enumerable: !0, get() {return this.Sa}}, 
+        Vk: {configurable: !0, enumerable: !0, get() {return this.Fxb}}
       })
       b.$b = c
     }, function (r, b) {
@@ -102123,7 +102118,7 @@ a000.Z9M = (function (j9M) {
         this.update = function () {
           var E = ''
           D.jY().forEach(function (G) {
-            E = E ? E + '\n' : ''
+            E += E ? '\n' : ''
             Object.entries(G).forEach(function (F) {
               var I = ma(F)
               F = I.next().value
@@ -102176,15 +102171,30 @@ a000.Z9M = (function (j9M) {
       c.prototype.Rac = function (x) {this.R1a.DFR = x}
       c.prototype.show = function () {
         var x = this
-        this.seen || (this.$Y = mb.setInterval(this.f4b, 1E3), x.out.appendChild(x.Jq), this.Veb.forEach(function (y) {y.addListener(x.bR)}), u.forEach(function (y) {x.j.addEventListener(y, x.bR)}), this.seen = !0, this.Jo.m1().then(function (y) {
-          x.Pua = y
-          x.bR()
-        }))
-        this.update()
+        if (!x.seen) {
+          x.$Y = mb.setInterval(x.f4b, 1E3)
+          x.out.appendChild(x.Jq)
+          x.Veb.forEach(function (y) {y.addListener(x.bR)})
+          u.forEach(function (y) {x.j.addEventListener(y, x.bR)})
+          x.seen = !0
+          x.Jo.m1().then(function (y) {
+            x.Pua = y
+            x.bR()
+          })
+        }
+        x.update()
       }
       c.prototype.py = function () {
         var x = this
-        this.seen && (clearInterval(this.$Y), this.nlb = this.Hqa = void 0, x.out.removeChild(x.Jq), this.Veb.forEach(function (y) {y.removeListener(x.bR)}), u.forEach(function (y) {x.j.removeEventListener(y, x.bR)}), this.O1.Xl(), this.seen = !1)
+        if (x.seen) {
+          clearInterval(x.$Y)
+          x.nlb = x.Hqa = void 0
+          x.out.removeChild(x.Jq)
+          x.Veb.forEach(function (y) {y.removeListener(x.bR)})
+          u.forEach(function (y) {x.j.removeEventListener(y, x.bR)})
+          x.O1.Xl()
+          x.seen = !1
+        }
       }
       c.prototype.toggle = function () {this.seen ? this.py() : this.show()}
       c.prototype.jY = function () {
@@ -102215,10 +102225,10 @@ a000.Z9M = (function (j9M) {
           'Buffering bitrate (a/v)': ba + ' / ' + bv,
           'Buffer size in Seconds (a/v)': m.Tj(tj.eW()) + ' / ' + m.Tj(tj.U1()),
         })
-        let xx = 1 << 30, as = pa?.size / xx, vs = pv?.size / xx
+        let asm = pa?.size / (1 << 20), asg = pa?.size / (1 << 30), vs = pv?.size / (1 << 30)
         N.push({
           PlaybackTime: sec2time(m.Tj(tj.mediaTime.value)) + ' / ' + sec2time(m.Tj(tj.Wx.ka(p.pa))),
-          'Size (a+v)': `${as.toFixed(2)} GB + ${vs.toFixed(2)} GB = ${(as + vs).toFixed(2)} GB`,
+          'Size (a+v)': `${asm.toFixed(2)} MB + ${vs.toFixed(2)} GB = ${(asg + vs).toFixed(2)} GB`,
           Volume: d.Dp(100 * tj.volume.value) + '%' + (tj.muted.value ? ' (Muted)' : '')
         })
         N.push({Throughput: tj.Xa + ' kbps'})

@@ -3,7 +3,7 @@ function sec2time (n) {
     .map(Math.floor)
     .map(String)
     .map(s => s.padStart(2, 0))
-    .join(':')
+    .join(':').replace(/^00:/, '')
 }
 function sec(m) {
   return (m / 1E3).toFixed(0)

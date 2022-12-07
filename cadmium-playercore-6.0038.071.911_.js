@@ -97859,7 +97859,7 @@ a000.Z9M = (function (j9M) {
         N.push({
           'Playing bitrate (a/v)': pa.bitrate + ' / ' + pv.bitrate + ' (' + pv.width + 'x' + pv.height + '@' + pv.framerate.toFixed(3) + ')',
           'Buffering bitrate (a/v)': ba + ' / ' + bv,
-          'Buffer size in Seconds (a/v)': sec(tj.eW()) + ' / ' + sec(tj.U1()),
+          'Buffered seconds (a/v)': sec(tj.eW()) + ' / ' + sec(tj.U1()),
         })
         let asm = pa?.size / (1 << 20), asg = pa?.size / (1 << 30), vs = pv?.size / (1 << 30)
         N.push({
